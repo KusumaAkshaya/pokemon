@@ -26,9 +26,11 @@ h1{
 .card{
     list-style: none;
     padding: 40px;
+    height: 400px;
     background-color: #f4f4f4;
     color: #222222;
     text-align: center;
+    margin: 10px;
 }
 
 .card-title{
@@ -40,9 +42,9 @@ h1{
 
 .card-subtitle{
     margin-top: 5px;
-    color: #dddddd;
+    color: #0000ff;
 }
 
 .card-image{
-    height: 100px;
+    height: 100%;
 }

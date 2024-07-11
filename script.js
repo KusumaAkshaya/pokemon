@@ -13,8 +13,8 @@ const fetchPokemon = () => {
         const pokemon = results.map((result) => ({
         name: result.name,
         image: result.sprites.front_default, 
+        id: result.id,
         type: result.types.map((type) => type.type.name).join(', '),
-        id: result.id
     }));
   displayPokemon(pokemon);
 })
@@ -26,10 +26,10 @@ const displayPokemon = (pokemon) => {
       `  <li class="card">
           <img class="card-image" src="${pokemon.image}">
           <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
-          <p class="card-subtitle"> Type: ${pokemon.type}</p>
+           <p class="card-subtitle"> Type: ${pokemon.type}</p>
           </li>`
      ).join('');
-     pokedex.innerHTML = pokemonHTML; 
+     document.getElementById("pokedex").innerHTML = pokemonHTML; 
 }
 
 fetchPokemon();
